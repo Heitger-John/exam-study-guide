@@ -120,8 +120,19 @@ public class MidtermPractice {
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
     public static boolean allStartWithA(List<String> list) {
-        return false;
+        for (int i = 0; i < list.size(); i ++)
+        {
+            String check = list.get(i).toLowerCase();
+            char firstLetter = check.charAt(0);
+            if(firstLetter != 'a')
+            {
+                return false;
+            }
+        }
+        return true;
     }
+
+    // Finished with 5:53 left. I tried to put to lowerCase in char instead of string. Swapped it and tests good.
 
     /**
      * Returns whether all nodes in a linked list contain positive (greater than 0) values.
