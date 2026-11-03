@@ -78,8 +78,18 @@ public class MidtermPractice {
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
      */
     public static int countOddNumbers(Map<String, Integer> map) {
-        return -1;
+        int count = 0;
+        for (Map.Entry<String, Integer> currentMap : map.entrySet())
+        {
+            int currentNum = currentMap.getValue();
+            if(currentNum % 2 != 0)
+            {
+                count++;
+            }
+        }
+        return count;
     }
+    // Finished with 6:31 left. accidently did currentNum % 0 which was throwing errors but quickly fixed it.
 
     /**
      * Returns true if all values are divisible by 3 in an array.
