@@ -140,8 +140,22 @@ public class MidtermPractice {
      * @param head the head of the linked list.
      */
     public static boolean allPositive(ListNode head) {
+        if (head == null)
+        {
+            return true;
+        }
+        while (head != null)
+        {
+            if (head.data  < 0 || head.data == 0)
+            {
+                return false;
+            }
+            head = head.next;
+        }
         return true;
     }
+
+    // Finished with 8:32 left.
 
     /**
      * Returns the product of all values in a linked list or 1 if the head is null.
