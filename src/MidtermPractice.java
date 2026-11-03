@@ -37,8 +37,18 @@ public class MidtermPractice {
      * Example: input: ["why"=7, "hello"=8, "brilliant"=99, "world"=15, "amazing"=17] -> output: 2
      */
     public static int countLongWords(Map<String, Integer> map) {
-        return -1;
+        int count = 0;
+        for (Map.Entry<String, Integer> currentMap : map.entrySet())
+        {
+            String currentWord = currentMap.getKey();
+            if (currentWord.length() > 5)
+            {
+                count++;
+            }
+        }
+        return count;
     }
+    // Forgot how to iterate over a map. Once I found the general for loop for maps, it is straightforward. Just have to remember the syntax.
 
     /**
      * Finds the average of the floats in an array.
