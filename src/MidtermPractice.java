@@ -57,8 +57,19 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+        if (arr.length == 0)
+            return 0.0;
+        double total = 0.0;
+        double sum = 0.0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            double currentNum = arr[i];
+            sum += currentNum;
+            total++;
+        }
+        return sum / total;
     }
+    // Finished with 5:17 left. No issues.
 
     /**
      * Counts how many odd numbers there are in the values of a Map.
