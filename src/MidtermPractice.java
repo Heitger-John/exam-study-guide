@@ -166,8 +166,20 @@ public class MidtermPractice {
      * Explanation: 5 * 3 * 4 = 60
      */
     public static int product(ListNode head) {
-        return 1;
+        int product = 1;
+        if (head == null)
+        {
+            return 1;
+        }
+        while (head != null)
+        {
+            product = product * head.data;
+            head = head.next;
+        }
+        return product;
     }
+
+    // Finished with 7: 49 left.
 
     /**
      * CHALLENGE PROBLEM: take extra time for this problem if needed
