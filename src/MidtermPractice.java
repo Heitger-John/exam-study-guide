@@ -100,8 +100,16 @@ public class MidtermPractice {
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
     public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (arr[i] % 3 != 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
+    // Finished with 8:49 remaining. EZ PZ.
 
     /**
      * Returns true if all words start with 'a' or 'A' in an List of Strings.
