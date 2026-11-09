@@ -179,7 +179,7 @@ public class MidtermPractice {
         return product;
     }
 
-    // Finished with 7: 49 left.
+    // Finished with 7:49 left.
 
     /**
      * CHALLENGE PROBLEM: take extra time for this problem if needed
@@ -194,7 +194,32 @@ public class MidtermPractice {
      * Explanation: 6, 2, and 4 are each strictly less than 10, so they are removed from the list
      */
     public static ListNode removeSmall(ListNode head) {
-        return null;
+        if (head == null)
+        {
+            return null;
+        }
+        ListNode current = head;
+        while (current.data < 10)
+        {
+            current = head.next;
+            head = current;
+            if (head == null)
+            {
+                return null;
+            }
+        }
+        while (current.next != null)
+        {
+            if (current.next.data < 10)
+            {
+                current.next = current.next.next;
+            }
+            else
+            {
+                current = current.next;
+            }
+        }
+        return head;
     }
 
 }
